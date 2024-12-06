@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "RizzOhioHightheSkibidiDatingSim-1733111667"
+define config.save_directory = "RizzOhioHightheSkibidiDatingSim-1733112779"
 
 
 ## Icon ########################################################################

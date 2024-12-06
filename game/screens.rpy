@@ -1,4 +1,5 @@
-﻿################################################################################
+﻿
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -175,19 +176,18 @@ style say_dialogue:
 screen input(prompt):
     style_prefix "input"
 
-    window:
-
+    frame:
+        background Frame("gui/frame.png", Borders(25,25,25,25)) 
+        xalign 0.5
+        yalign 0.5
+        xpadding 30
+        ypadding 30
         vbox:
-            xanchor gui.dialogue_text_xalign
-            xpos gui.dialogue_xpos
-            xsize gui.dialogue_width
-            ypos gui.dialogue_ypos
-
+            spacing 10
             text prompt style "input_prompt"
             input id "input"
 
 style input_prompt is default
-
 style input_prompt:
     xalign gui.dialogue_text_xalign
     properties gui.text_properties("input_prompt")
@@ -207,6 +207,12 @@ style input:
 
 screen choice(items):
     style_prefix "choice"
+    viewport:
+        scrollbars "vertical"
+        mousewheel True
+        draggable True
+
+        side_yfill True
 
     vbox:
         for i in items:
@@ -219,7 +225,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
+    ypos 500
     yanchor 0.5
 
     spacing gui.choice_spacing
